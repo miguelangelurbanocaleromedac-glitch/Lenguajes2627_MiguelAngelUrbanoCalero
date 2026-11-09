@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" conten="Miguel Angel Urbano Calero" />
+    <title>Ejercicio con formularios</title>
+    <link rel="stylesheet" href="estilos_formularios.css" />
+  </head>
+  <body>
+    <h1>Ejercicio con formularios</h1>
+
+    <main>
+      <form action="procesar.php" method="post">
+        <h2>Formulario de registro al curso</h2>
+
+        <label for="nombre">Nombre completo (requerido):</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo electrónico (requerido):</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="0" />
+
+        <label for="curso">Curso de interés:</label>
+        <select id="curso" name="curso">
+          <option>Informática básica</option>
+          <option>Programación web</option>
+          <option>Bases de datos</option>
+        </select>
+
+        <p>Turno preferido:</p>
+        <label
+          ><input type="radio" name="turno" value="Mañana" required />
+          Mañana</label
+        >
+        <label><input type="radio" name="turno" value="Tarde" /> Tarde</label>
+
+        <label
+          ><input
+            type="checkbox"
+            name="condiciones"
+            value="Aceptadas"
+            required
+          />
+          Acepto las condiciones del curso</label
+        >
+
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea
+          id="comentarios"
+          name="comentarios"
+          placeholder="Escribe aquí tus dudas o preferencias..."
+        ></textarea>
+
+        <input type="submit" value="Enviar registro" />
+      </form>
+    </main>
+  </body>
+</html>
