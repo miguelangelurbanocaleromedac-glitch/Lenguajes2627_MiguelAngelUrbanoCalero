@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Las mejoras de HTML5, las etiquetas semánticas, los nuevos controles de formulario, el contenido multimedia y los elementos interactivos.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 06: La web semántica. HTML5 | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link" href="tema1.html"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link" href="tema2.html"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link" href="tema3.html"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link" href="tema4.html"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link" href="tema5.html"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link is-active" href="tema6.html" aria-current="page"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link" href="tema7.html"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link" href="tema8.html"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link" href="tema9.html"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 6 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">HTML5 · TEMA 06</p>
+        <h1>La web semántica. HTML5</h1>
+        <p class="lead">Las mejoras de HTML5, las etiquetas semánticas, los nuevos controles de formulario, el contenido multimedia y los elementos interactivos.</p>
+        <div class="hero-meta"><span class="hero-pill">HTML</span><span class="hero-pill">Estructura con significado y nuevas posibilidades</span><span class="hero-pill">Unidad 06/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Entender el concepto de web semántica.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Utilizar las nuevas etiquetas estructurales de HTML5.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Conocer los controles, multimedia y elementos interactivos.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#semantica">Web semántica y mejoras de HTML5</a>
+<a href="#estructura">Etiquetas semánticas principales</a>
+<a href="#form-html5">Nuevos controles de formulario</a>
+<a href="#progress">Elementos de progreso y medida</a>
+<a href="#multimedia">Audio y vídeo</a>
+<a href="#figure">Imágenes con descripción</a>
+<a href="#interactivos">Elementos interactivos: details y summary</a></div>
+    </section>
+    <section class="topic-section" id="semantica">
+  <div class="section-heading"><span class="section-number">01</span><h2>Web semántica y mejoras de HTML5</h2></div>
+  <div class="section-body"><p>La <strong>web semántica</strong> pretende que las partes del documento tengan un significado reconocible. HTML5 amplía las etiquetas disponibles y facilita crear páginas con una estructura más clara.</p><p>Los apuntes destacan mejoras en semántica, multimedia, gráficos 2D/3D, almacenamiento local, rendimiento, geolocalización y funciones como arrastrar y soltar. También refuerza la separación entre contenido HTML y presentación CSS.</p></div>
+</section><section class="topic-section" id="estructura">
+  <div class="section-heading"><span class="section-number">02</span><h2>Etiquetas semánticas principales</h2></div>
+  <div class="section-body"><div class="semantic-map"><div class="sem-header">&lt;header&gt; · Cabecera</div><div class="sem-nav">&lt;nav&gt; · Navegación</div><div class="sem-main"><span>&lt;main&gt; · Contenido principal</span><div class="sem-columns"><div><b>&lt;section&gt;</b><small>Sección temática</small><article>&lt;article&gt; · Contenido autónomo</article></div><aside>&lt;aside&gt; · Contenido secundario</aside></div></div><div class="sem-footer">&lt;footer&gt; · Pie de página</div></div><p><code>header</code> presenta una cabecera; <code>nav</code> agrupa enlaces de navegación; <code>main</code> contiene el contenido principal y se utiliza una sola vez; <code>section</code> agrupa contenido de una misma temática; <code>article</code> representa una pieza autónoma; <code>aside</code> contiene información complementaria; <code>footer</code> reúne información del pie.</p></div>
+</section><section class="topic-section" id="form-html5">
+  <div class="section-heading"><span class="section-number">03</span><h2>Nuevos controles de formulario</h2></div>
+  <div class="section-body"><p>HTML5 incorpora nuevos valores para el atributo <code>type</code> de <code>input</code>. El navegador puede validar algunos datos y ofrecer controles adaptados.</p><div class="table-wrap"><table><thead><tr><th>Tipo</th><th>Utilidad</th></tr></thead><tbody><tr><th>email</th><td>Comprueba el formato de una dirección de correo.</td></tr><tr><th>url</th><td>Solicita una dirección web.</td></tr><tr><th>date / time</th><td>Permite seleccionar fecha u hora.</td></tr><tr><th>number</th><td>Permite introducir un valor numérico.</td></tr><tr><th>range</th><td>Ofrece un control deslizante.</td></tr><tr><th>color</th><td>Abre un selector de color.</td></tr></tbody></table></div><p>También se incluyen atributos como <code>placeholder</code> para mostrar una indicación, <code>min</code> y <code>max</code> para establecer límites y <code>pattern</code> para validar un formato.</p><div class="code-card"><div class="code-caption">Ejemplo de controles HTML5.</div><pre><code>&lt;label for=&quot;correo&quot;&gt;Correo&lt;/label&gt;
+&lt;input id=&quot;correo&quot; name=&quot;correo&quot; type=&quot;email&quot; required&gt;
+
+&lt;label for=&quot;fecha&quot;&gt;Fecha&lt;/label&gt;
+&lt;input id=&quot;fecha&quot; name=&quot;fecha&quot; type=&quot;date&quot;&gt;
+
+&lt;label for=&quot;nivel&quot;&gt;Nivel&lt;/label&gt;
+&lt;input id=&quot;nivel&quot; name=&quot;nivel&quot; type=&quot;range&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;</code></pre></div></div>
+</section><section class="topic-section" id="progress">
+  <div class="section-heading"><span class="section-number">04</span><h2>Elementos de progreso y medida</h2></div>
+  <div class="section-body"><p><code>&lt;progress&gt;</code> representa el avance de una tarea, como una descarga o un proceso. <code>&lt;meter&gt;</code> representa una medida dentro de un rango conocido.</p><div class="code-card"><div class="code-caption">Ejemplo de progress y meter.</div><pre><code>&lt;label for=&quot;avance&quot;&gt;Progreso del proyecto&lt;/label&gt;
+&lt;progress id=&quot;avance&quot; value=&quot;35&quot; max=&quot;100&quot;&gt;35%&lt;/progress&gt;
+
+&lt;label for=&quot;ocupacion&quot;&gt;Ocupación&lt;/label&gt;
+&lt;meter id=&quot;ocupacion&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;72&quot;&gt;72%&lt;/meter&gt;</code></pre></div></div>
+</section><section class="topic-section" id="multimedia">
+  <div class="section-heading"><span class="section-number">05</span><h2>Audio y vídeo</h2></div>
+  <div class="section-body"><p>HTML5 permite insertar sonido y vídeo sin depender obligatoriamente de complementos externos. Se utilizan las etiquetas <code>&lt;audio&gt;</code> y <code>&lt;video&gt;</code>, normalmente acompañadas de <code>&lt;source&gt;</code> para indicar los archivos disponibles.</p><ul><li><code>controls</code>: muestra los controles de reproducción.</li><li><code>loop</code>: repite el recurso al terminar.</li><li><code>preload</code>: controla la precarga.</li><li>En vídeo también pueden utilizarse <code>width</code>, <code>height</code>, <code>muted</code> y <code>poster</code>.</li></ul><div class="code-card"><div class="code-caption">Ejemplo de audio y vídeo.</div><pre><code>&lt;audio controls&gt;
+  &lt;source src=&quot;audio/podcast.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  Tu navegador no puede reproducir este audio.
+&lt;/audio&gt;
+
+&lt;video controls width=&quot;640&quot; poster=&quot;img/portada.jpg&quot;&gt;
+  &lt;source src=&quot;video/explicacion.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  Tu navegador no puede reproducir este vídeo.
+&lt;/video&gt;</code></pre></div></div>
+</section><section class="topic-section" id="figure">
+  <div class="section-heading"><span class="section-number">06</span><h2>Imágenes con descripción</h2></div>
+  <div class="section-body"><p><code>&lt;figure&gt;</code> agrupa una imagen u otro contenido independiente y <code>&lt;figcaption&gt;</code> añade su descripción o pie.</p><div class="code-card"><div class="code-caption">Ejemplo de figure y figcaption.</div><pre><code>&lt;figure&gt;
+  &lt;img src=&quot;img/aula.jpg&quot; alt=&quot;Aula de informática&quot;&gt;
+  &lt;figcaption&gt;Un aula preparada para practicar HTML.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre></div></div>
+</section><section class="topic-section" id="interactivos">
+  <div class="section-heading"><span class="section-number">07</span><h2>Elementos interactivos: details y summary</h2></div>
+  <div class="section-body"><p><code>&lt;details&gt;</code> permite mostrar u ocultar información. Dentro se coloca <code>&lt;summary&gt;</code>, que contiene el título visible del desplegable. El atributo <code>open</code> hace que aparezca abierto al cargar la página.</p><div class="code-card"><div class="code-caption">Ejemplo de preguntas frecuentes con details.</div><pre><code>&lt;details&gt;
+  &lt;summary&gt;¿Qué significa HTML?&lt;/summary&gt;
+  &lt;p&gt;HyperText Markup Language.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details open&gt;
+  &lt;summary&gt;¿Qué es CSS?&lt;/summary&gt;
+  &lt;p&gt;Un lenguaje para definir la presentación visual.&lt;/p&gt;
+&lt;/details&gt;</code></pre></div></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>HTML5 aporta significado a la estructura, amplía los formularios e integra recursos multimedia y elementos interactivos directamente en el documento.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Actualizar un formulario con campos de correo, fecha, número y rango. Añadir una sección de preguntas frecuentes con details y summary, e insertar un audio o vídeo con controles.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="tema5.html"><small>← Tema anterior</small><strong>05. Tablas y formularios</strong></a><a href="tema7.html"><small>Tema siguiente →</small><strong>07. Hojas de estilo. CSS</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>

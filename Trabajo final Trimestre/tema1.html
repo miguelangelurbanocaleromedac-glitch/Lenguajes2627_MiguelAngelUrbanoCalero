@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Qué son los lenguajes de marcas, cómo se clasifican y por qué XML permite organizar e intercambiar datos.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 01: Lenguajes de marcas | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link is-active" href="tema1.html" aria-current="page"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link" href="tema2.html"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link" href="tema3.html"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link" href="tema4.html"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link" href="tema5.html"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link" href="tema6.html"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link" href="tema7.html"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link" href="tema8.html"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link" href="tema9.html"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 1 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">BASES DE LA WEB · TEMA 01</p>
+        <h1>Lenguajes de marcas</h1>
+        <p class="lead">Qué son los lenguajes de marcas, cómo se clasifican y por qué XML permite organizar e intercambiar datos.</p>
+        <div class="hero-meta"><span class="hero-pill">Fundamentos</span><span class="hero-pill">De las marcas a la información estructurada</span><span class="hero-pill">Unidad 01/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Entender para qué sirven los lenguajes de marcas.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Distinguir presentación, procedimiento y descripción semántica.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Reconocer la estructura y las reglas básicas de XML.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#que-son">¿Qué es un lenguaje de marcas?</a>
+<a href="#caracteristicas">Características principales</a>
+<a href="#evolucion">Origen y evolución</a>
+<a href="#clasificacion">Clasificación de los lenguajes</a>
+<a href="#usos">Usos habituales</a>
+<a href="#editores">Herramientas de edición</a>
+<a href="#xml">XML: estructura y características</a>
+<a href="#bien-formado">Cómo conseguir un XML bien formado</a>
+<a href="#namespaces">Espacios de nombres</a></div>
+    </section>
+    <section class="topic-section" id="que-son">
+  <div class="section-heading"><span class="section-number">01</span><h2>¿Qué es un lenguaje de marcas?</h2></div>
+  <div class="section-body"><p>Un <strong>lenguaje de marcas</strong> utiliza etiquetas para describir la información de un documento. Las marcas indican qué partes hay y qué significado tienen; después, una aplicación interpreta esas marcas para mostrar o procesar el contenido.</p><p>Se utiliza en páginas web, archivos de configuración y en el intercambio de datos entre aplicaciones. Como normalmente se guarda como texto, puede abrirse con distintos editores y no depende de un único sistema operativo.</p></div>
+</section><section class="topic-section" id="caracteristicas">
+  <div class="section-heading"><span class="section-number">02</span><h2>Características principales</h2></div>
+  <div class="section-body"><div class="feature-grid"><article class="feature-card"><span class="feature-icon">TXT</span><h3>Texto plano</h3><p>Se puede leer y modificar con un editor de texto.</p></article><article class="feature-card"><span class="feature-icon">&lt;/&gt;</span><h3>Marcas integradas</h3><p>Las etiquetas forman parte del documento, pero normalmente no aparecen como contenido visible.</p></article><article class="feature-card"><span class="feature-icon">↔</span><h3>Intercambio</h3><p>Ayuda a compartir información entre aplicaciones y plataformas.</p></article><article class="feature-card"><span class="feature-icon">✳</span><h3>Flexibilidad</h3><p>La estructura puede adaptarse a los datos y necesidades de cada proyecto.</p></article></div></div>
+</section><section class="topic-section" id="evolucion">
+  <div class="section-heading"><span class="section-number">03</span><h2>Origen y evolución</h2></div>
+  <div class="section-body"><p>Los apuntes explican la evolución desde los primeros estándares hasta los lenguajes actuales:</p><ol class="timeline"><li><strong>GML</strong><span>Surge para estandarizar el intercambio de documentos.</span></li><li><strong>SGML</strong><span>Amplía y formaliza esa idea como estándar.</span></li><li><strong>HTML</strong><span>Tim Berners-Lee lo impulsa para publicar y visualizar documentos en la web.</span></li><li><strong>XML</strong><span>Se convierte en un estándar flexible para describir datos mediante etiquetas propias.</span></li><li><strong>XHTML</strong><span>Combina HTML con reglas de escritura más estrictas inspiradas en XML.</span></li></ol></div>
+</section><section class="topic-section" id="clasificacion">
+  <div class="section-heading"><span class="section-number">04</span><h2>Clasificación de los lenguajes</h2></div>
+  <div class="section-body"><div class="table-wrap"><table><thead><tr><th>Tipo</th><th>Para qué sirve</th><th>Ejemplos</th></tr></thead><tbody><tr><th>Presentación</th><td>Da formato visual al documento.</td><td>Marcas de formato de procesadores de texto.</td></tr><tr><th>Procedimiento</th><td>Describe instrucciones o pasos para tratar y presentar el contenido.</td><td>PostScript, TeX, troff.</td></tr><tr><th>Descriptivo o semántico</th><td>Identifica qué significa cada parte, sin decidir por sí solo su aspecto visual.</td><td>SGML, HTML, XML y XHTML.</td></tr></tbody></table></div><p>En los apuntes también aparecen BBCode, Markdown, SVG y Office Open XML como ejemplos que se pueden clasificar según su función.</p></div>
+</section><section class="topic-section" id="usos">
+  <div class="section-heading"><span class="section-number">05</span><h2>Usos habituales</h2></div>
+  <div class="section-body"><ul class="check-list"><li>Compartir información entre plataformas diferentes.</li><li>Guardar datos estructurados que después se pueden consultar o filtrar.</li><li>Convertir información de un formato a otro.</li><li>Separar los datos de la forma en la que se van a mostrar.</li></ul></div>
+</section><section class="topic-section" id="editores">
+  <div class="section-heading"><span class="section-number">06</span><h2>Herramientas de edición</h2></div>
+  <div class="section-body"><div class="tool-grid"><article class="tool-card"><h3>Bloc de notas</h3><p>Editor sencillo de texto plano. Sirve para crear archivos, aunque ofrece pocas ayudas.</p></article><article class="tool-card"><h3>Notepad++</h3><p>Colorea la sintaxis y muestra números de línea, lo que facilita localizar errores.</p></article><article class="tool-card"><h3>Visual Studio Code</h3><p>Incluye autocompletado, extensiones y herramientas como Live Server para ver cambios en el navegador.</p></article></div><p>Los apuntes también nombran editores online como CodePen y Online HTML Editor.</p></div>
+</section><section class="topic-section" id="xml">
+  <div class="section-heading"><span class="section-number">07</span><h2>XML: estructura y características</h2></div>
+  <div class="section-body"><p><strong>XML</strong> (eXtensible Markup Language) permite crear etiquetas propias para describir datos. No sustituye a HTML: XML se centra en estructurar información, mientras que HTML se utiliza para construir documentos que se muestran en el navegador.</p><p>Su estructura tiene forma de árbol: existe un único nodo raíz y, dentro de él, se organizan los elementos hijos. El documento se puede dividir en un <strong>prólogo</strong>, con información como la versión y la codificación, y un <strong>cuerpo</strong>, con los datos.</p><div class="code-card"><div class="code-caption">Ejemplo sencillo de documento XML.</div><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;biblioteca ciudad=&quot;Madrid&quot;&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Aprender HTML&lt;/titulo&gt;
+    &lt;autor&gt;Ana Ruiz&lt;/autor&gt;
+    &lt;paginas&gt;180&lt;/paginas&gt;
+  &lt;/libro&gt;
+&lt;/biblioteca&gt;</code></pre></div></div>
+</section><section class="topic-section" id="bien-formado">
+  <div class="section-heading"><span class="section-number">08</span><h2>Cómo conseguir un XML bien formado</h2></div>
+  <div class="section-body"><ul class="check-list"><li>Debe existir un único elemento raíz que contenga al resto.</li><li>Cada etiqueta abierta debe cerrarse correctamente.</li><li>Los elementos deben estar anidados en el orden correcto.</li><li>Los valores de los atributos deben escribirse entre comillas.</li><li>Los nombres distinguen mayúsculas y minúsculas: <code>&lt;coche&gt;</code> y <code>&lt;Coche&gt;</code> no son iguales.</li><li>Los nombres de etiqueta deben respetar las reglas de XML y no comenzar por un número.</li><li>Los comentarios se escriben con <code>&lt;!-- ... --&gt;</code>.</li></ul><p>Un documento bien formado respeta la sintaxis de XML. Un validador o un editor con comprobación XML ayuda a detectar errores.</p></div>
+</section><section class="topic-section" id="namespaces">
+  <div class="section-heading"><span class="section-number">09</span><h2>Espacios de nombres</h2></div>
+  <div class="section-body"><p>Los <strong>espacios de nombres</strong> evitan confusiones cuando se combinan documentos XML que utilizan la misma etiqueta para conceptos diferentes. Se declara un identificador con <code>xmlns</code> y se usan prefijos delante de las etiquetas.</p><div class="code-card"><div class="code-caption">Dos etiquetas con el mismo nombre, pero distinto espacio de nombres.</div><pre><code>&lt;datos xmlns:rio=&quot;https://ejemplo.es/rios&quot;
+       xmlns:tv=&quot;https://ejemplo.es/television&quot;&gt;
+  &lt;rio:canal&gt;Canal de agua&lt;/rio:canal&gt;
+  &lt;tv:canal&gt;Canal de televisión&lt;/tv:canal&gt;
+&lt;/datos&gt;</code></pre></div></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>Un lenguaje de marcas estructura la información. XML permite definir etiquetas propias y organizar los datos en un árbol con reglas sintácticas claras.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Clasificar varios lenguajes de marcas y crear un XML que reúna información de libros de diferentes bibliotecas. Si aparecen etiquetas con el mismo nombre y significado distinto, se pueden separar mediante espacios de nombres.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="index.html"><small>← Inicio</small><strong>Volver al temario</strong></a><a href="tema2.html"><small>Tema siguiente →</small><strong>02. Introducción al documento HTML</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>

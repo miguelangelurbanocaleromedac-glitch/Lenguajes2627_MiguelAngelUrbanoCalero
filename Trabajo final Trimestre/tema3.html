@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La estructura básica, el tipo de documento, la cabecera, la codificación de caracteres y los primeros bloques del cuerpo.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 03: Estructura de un documento HTML | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link" href="tema1.html"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link" href="tema2.html"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link is-active" href="tema3.html" aria-current="page"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link" href="tema4.html"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link" href="tema5.html"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link" href="tema6.html"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link" href="tema7.html"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link" href="tema8.html"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link" href="tema9.html"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 3 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">DOCUMENTO HTML · TEMA 03</p>
+        <h1>Estructura de un documento HTML</h1>
+        <p class="lead">La estructura básica, el tipo de documento, la cabecera, la codificación de caracteres y los primeros bloques del cuerpo.</p>
+        <div class="hero-meta"><span class="hero-pill">HTML</span><span class="hero-pill">La base sobre la que se construye cada página</span><span class="hero-pill">Unidad 03/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Construir la estructura básica de un documento HTML.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Diferenciar head y body.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Utilizar párrafos, divisiones, citas, formato y encabezados.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#estructura">Las tres partes del documento</a>
+<a href="#doctype">Tipo de documento (DOCTYPE y DTD)</a>
+<a href="#head">La cabecera: metadatos y recursos</a>
+<a href="#charset">Codificación de caracteres (charset)</a>
+<a href="#bloques">Contenido del body: párrafos y separadores</a>
+<a href="#div">Divisiones y divisiones anidadas</a>
+<a href="#citas">Citas largas y texto preformateado</a>
+<a href="#titulos">Títulos y jerarquía de secciones</a></div>
+    </section>
+    <section class="topic-section" id="estructura">
+  <div class="section-heading"><span class="section-number">01</span><h2>Las tres partes del documento</h2></div>
+  <div class="section-body"><p>Un documento HTML5 se compone de una declaración de tipo de documento, una <strong>cabecera</strong> y un <strong>cuerpo</strong>. La etiqueta <code>&lt;html&gt;</code> contiene todo el documento; <code>&lt;head&gt;</code> guarda información sobre la página y <code>&lt;body&gt;</code> contiene lo que se muestra al usuario.</p><div class="code-card"><div class="code-caption">Estructura mínima de HTML5.</div><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Mi primera página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hola, mundo&lt;/h1&gt;
+  &lt;p&gt;Mi primera página web.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div>
+</section><section class="topic-section" id="doctype">
+  <div class="section-heading"><span class="section-number">02</span><h2>Tipo de documento (DOCTYPE y DTD)</h2></div>
+  <div class="section-body"><p>La declaración <code>&lt;!DOCTYPE html&gt;</code> indica al navegador que se está utilizando HTML5. En HTML 4.01 existían declaraciones DTD como <strong>Strict</strong>, <strong>Transitional</strong> y <strong>Frameset</strong>, cada una con reglas diferentes. En HTML5 la declaración se simplificó.</p><p>Omitir el DOCTYPE puede hacer que el navegador entre en un modo de compatibilidad con documentos antiguos y produzca diferencias de visualización.</p></div>
+</section><section class="topic-section" id="head">
+  <div class="section-heading"><span class="section-number">03</span><h2>La cabecera: metadatos y recursos</h2></div>
+  <div class="section-body"><p>Dentro de <code>&lt;head&gt;</code> se incluyen datos que describen el documento y referencias a recursos:</p><ul><li><code>&lt;title&gt;</code>: texto de la pestaña del navegador.</li><li><code>&lt;meta&gt;</code>: metadatos, como descripción, autor o codificación.</li><li><code>&lt;link&gt;</code>: enlaza recursos externos, por ejemplo una hoja CSS.</li><li><code>&lt;style&gt;</code>: permite escribir CSS dentro del propio HTML.</li><li><code>&lt;script&gt;</code>: incorpora o enlaza scripts.</li></ul><p>Para mantener el código organizado, es recomendable guardar el CSS y los scripts en archivos externos cuando el proyecto crece.</p><div class="code-card"><div class="code-caption">Ejemplo de cabecera.</div><pre><code>&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;Guía de HTML básico&quot;&gt;
+  &lt;meta name=&quot;author&quot; content=&quot;WebLab&quot;&gt;
+  &lt;title&gt;Guía de HTML&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;/head&gt;</code></pre></div></div>
+</section><section class="topic-section" id="charset">
+  <div class="section-heading"><span class="section-number">04</span><h2>Codificación de caracteres (charset)</h2></div>
+  <div class="section-body"><p>La codificación relaciona los caracteres que escribimos con los datos que el ordenador almacena. Los apuntes presentan ASCII, ISO-8859-1, ANSI y UTF-8. <strong>UTF-8</strong> es la opción habitual en HTML5 porque admite una gran variedad de caracteres y evita problemas con acentos, eñes y símbolos.</p><p>La codificación se declara con <code>&lt;meta charset="UTF-8"&gt;</code>. También existen entidades HTML para escribir caracteres reservados o símbolos especiales, por ejemplo <code>&amp;lt;</code> representa el signo menor que.</p></div>
+</section><section class="topic-section" id="bloques">
+  <div class="section-heading"><span class="section-number">05</span><h2>Contenido del body: párrafos y separadores</h2></div>
+  <div class="section-body"><p>El cuerpo contiene el contenido principal de la página. Para crear párrafos se utiliza <code>&lt;p&gt;</code>. La etiqueta <code>&lt;hr&gt;</code> dibuja una separación temática mediante una línea horizontal.</p><div class="code-card"><div class="code-caption">Ejemplo de párrafos y separador.</div><pre><code>&lt;p&gt;Primer párrafo de información.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Segundo párrafo, después del separador.&lt;/p&gt;</code></pre></div></div>
+</section><section class="topic-section" id="div">
+  <div class="section-heading"><span class="section-number">06</span><h2>Divisiones y divisiones anidadas</h2></div>
+  <div class="section-body"><p><code>&lt;div&gt;</code> agrupa otros elementos para tratarlos como un bloque. Se pueden introducir unas divisiones dentro de otras para organizar mejor el contenido y aplicar estilos CSS a cada grupo.</p><p>No conviene utilizar divisiones sin necesidad: son útiles cuando agrupan varios elementos que deben tratarse en conjunto.</p><div class="code-card"><div class="code-caption">Ejemplo de divisiones anidadas.</div><pre><code>&lt;div class=&quot;tarjeta&quot;&gt;
+  &lt;h2&gt;Datos personales&lt;/h2&gt;
+  &lt;div class=&quot;datos&quot;&gt;
+    &lt;p&gt;Nombre: Alex&lt;/p&gt;
+    &lt;p&gt;Estudios: DAW&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div>
+</section><section class="topic-section" id="citas">
+  <div class="section-heading"><span class="section-number">07</span><h2>Citas largas y texto preformateado</h2></div>
+  <div class="section-body"><p><code>&lt;blockquote&gt;</code> sirve para incluir una cita extensa que puede contener varios párrafos u otros elementos. <code>&lt;pre&gt;</code> muestra el texto respetando los espacios, tabulaciones y saltos de línea que se escribieron en el código.</p><div class="code-card"><div class="code-caption">Ejemplo de blockquote y pre.</div><pre><code>&lt;blockquote&gt;
+  &lt;p&gt;La práctica ayuda a entender la estructura de una página.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;
+Nombre:  Alex
+Ciclo:   DAW
+Curso:   Primero
+&lt;/pre&gt;</code></pre></div></div>
+</section><section class="topic-section" id="titulos">
+  <div class="section-heading"><span class="section-number">08</span><h2>Títulos y jerarquía de secciones</h2></div>
+  <div class="section-body"><p>Los encabezados se escriben con las etiquetas <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>. <code>h1</code> representa el título de mayor nivel y <code>h6</code> el de menor nivel. Deben organizarse de forma lógica, sin saltar niveles por motivos puramente visuales.</p><p>Una estructura habitual es usar <code>h1</code> para el título de la página, <code>h2</code> para los apartados y <code>h3</code> para subapartados.</p></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>La estructura separa los metadatos del contenido visible. Un documento ordenado con DOCTYPE, head y body es más fácil de interpretar y mantener.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Preparar una ficha HTML con nombre, estudios, correo y teléfono. Añadir comentarios, agrupar los datos con div y utilizar pre para conservar la alineación de un bloque de texto.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="tema2.html"><small>← Tema anterior</small><strong>02. Introducción al documento HTML</strong></a><a href="tema4.html"><small>Tema siguiente →</small><strong>04. Identificación de etiquetas y atributos</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>

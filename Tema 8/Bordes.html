@@ -3,97 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="author" content="Miguel Ángel Urbano Calero">
+    <title>Recuadros CSS</title>
     <style>
-
-      .caja{
-        width: 200px;
-        height: 150px;
+      .caja {
+        width: 300px;
+         height: 300px;
+    box-sizing: border-box;
       }
-      
-              .caja1{
-
-                  background-color: antiquewhite;
-                  border-color:black;
-                  border-style: dotted;
-                  border-width: 5px;
-                  
-                  margin:10px;
-              }
-
-              .caja2{
-               background-color: yellow;
-               border: 3px solid black;
-               border-radius: 0 35px 35px 0;
-               
-               border-left: 40px solid black;
-               margin:10px;
-    
-
-              }
-               .caja3{
-                 
-                  background-color: salmon;
-                  border: 16px ridge rosybrown;
-                 
-                  
-              }
-               .caja4{
-                    background-color: rgb(100, 243, 100);
-                    border: 20px inset darkgreen;
-                    border-radius: 0 60px 0 60px;
-                    margin: 10px;
-                    
-              }
-               .caja5{
-                  width: 200px; 
-                  height: 150px; 
-                  background-color: rgb(252, 226, 143);
-                  border: 5px dashed orange;
-                  border-radius: 50%;
-              }
-               .caja6{
+      .caja1 {
+        background-color: antiquewhite;
+        border-color: black;
+        border-style: dotted;
+        border-width: 5px;
+        margin: 10px;
+        padding-top: 10%;
+        padding-left: 10%;
         
-                  background-color: lightblue;
-                  border: 20px inset blue;
-                  border-radius: 0 60px 0 60px;
-                  margin: 10px;
-              }
-               .caja7{
-                  
-                  background-color: red;
-                  border: 2px solid red;    
-              }
-               .caja8{
-                  width: 200px; ;
-                  height: 150px; ;
-                  background-color: red;
-                  border: 2px solid black;
-              }
-               .caja9{
-                  width: 200px; ;
-                  height: 150px; ;
-                  background-color: red;
-                  border: 2px solid black;
-              }
+      
+      }
+      .caja2 {
+        background-color: gold;
+        border: 3px solid black;
+        border-left: 70px solid black;
+        border-radius: 0 35px 35px 0;
+        margin: 10px;
+      }
+      .caja3 {
+        background-color: salmon;
+        border: 14px ridge rosybrown;
+        padding-top: 10px;
+        padding-left: 130px;
+        margin: 30px;
+      }
+      .caja4 {
+        background-color: darkseagreen;
+        border: 20px inset darkgreen;
+        border-radius: 0 60px 0 60px;
+        padding-top: 10px;
+        padding-left: 10px;
+        margin: 10px;
+      }
+      .caja5 {
+        background-color: lightsalmon;
+        border: 5px dashed orange;
+        border-radius: 50%;
+        padding-top: 135px;
+        padding-left: 150px;
+        margin: 10px;
+      }
+      .caja6 {
+        background-color: lightblue;
+        border: 20px inset blue;
+        border-radius: 0 60px 60px 0 60px;
+        padding-top: 115px;
+        padding-left: 65px;
+        margin: 10px;
+      }
+      .caja7 {
+        background: linear-gradient(red, orange, yellow);
+        border: 5px solid red;
+        padding-top: 60px;
+        padding-left: 75px;
+      }
+      .caja8 {
+        border-style: solid;
+        border-width: 25px;
+        border-top-color: yellow;
+        border-right-color: green;
+        border-bottom-color: red;
+        border-left-color: blue;
+        padding-top: 10px; 
+        padding-left: 10px;
+      }
+      .caja9 {
+        border: 14px double blueviolet;
+        border-radius: 45px;
+        padding-top: 40px;
+        padding-left: 70px;
+      }
     </style>
   </head>
   <body>
     <table>
       <tr>
-        <td><div class="caja caja1"></div></td>
-        <td><div class="caja caja2"></div></td>
-        <td><div class="caja caja3"></div></td>
+        <td><div class="caja caja1">
+          Estilo de la caja
+        </div></td>
+        <td><div class="caja caja2">
+          Contenido de la caja 2 
+        </div></td>
+        <td><div class="caja caja3">
+          Contenido de la caja
+        </div></td>
       </tr>
       <tr>
-        <td><div class="caja caja4"></div></td>
-        <td><div class="caja caja5"></div></td>
-        <td><div class="caja caja6"></div></td>
+        <td><div class="caja caja4">
+          Contenido de la caja
+        </div></td>
+        <td><div class="caja caja5">
+          ?
+        </div></td>
+        <td><div class="caja caja6">
+          Contenido de la caja
+        </div></td>
       </tr>
       <tr>
-        <td><div class="caja caja7"></div></td>
-        <td><div class="caja caja8"></div></td>
-        <td><div class="caja caja9"></div></td>
+        <td><div class="caja caja7">
+          Contenido de la caja
+        </div></td>
+        <td><div class="caja caja8">
+          Contenido de la caja
+        </div></td>
+        <td><div class="caja caja9">
+          Contenido de la caja
+        </div></td>
       </tr>
     </table>
   </body>

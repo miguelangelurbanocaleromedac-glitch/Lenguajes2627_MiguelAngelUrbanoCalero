@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Miguel Ángel Urbano Calero">
+    <title>Índice - Prácticas de HTML y CSS</title>
+    <style>
+      body {
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+        background-color: #f1f6f4;
+        margin: 0;
+        padding: 40px 20px;
+        text-align: center;
+        color: #263b39;
+      }
+
+      .contenedor {
+        max-width: 950px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #d3e0db;
+        border-top: 5px solid #4d887b;
+        border-radius: 10px;
+        padding: 36px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      h1 {
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+        color: #315f58;
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      p.subtitulo {
+        color: #61736e;
+        font-size: 16px;
+        margin-bottom: 35px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #315f58;
+        color: #ffffff;
+        padding: 14px 18px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      td {
+        padding: 14px 18px;
+        border-bottom: 1px solid #e0e9e5;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f6f9f7;
+      }
+
+      tr:hover {
+        background-color: #e2f0eb;
+      }
+
+      a.boton-enlace {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #4d887b;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      a.boton-enlace:hover {
+        background-color: #356d62;
+      }
+
+      .autor {
+        margin-top: 40px;
+        font-size: 13px;
+        color: #82958e;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="contenedor">
+      <h1>Mis prácticas de HTML y CSS</h1>
+      <p class="subtitulo">Recopilación de ejercicios de clase de 1.º de DAW. Elige una práctica para consultar el resultado y los conceptos trabajados.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>N.º</th>
+            <th>Ejercicio</th>
+            <th>Contenidos trabajados</th>
+            <th>Acceso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>01</strong></td>
+            <td>Menú con Iconos</td>
+            <td>Lista no numerada (<code>&lt;ul&gt;</code>), iconos y efectos hover.</td>
+            <td><a href="Bordes.html" class="boton-enlace">Ver ejercicio</a></td>
+          </tr>
+          <tr>
+            <td><strong>02</strong></td>
+            <td>Tabla de Estudiantes</td>
+            <td>Tabla de datos, tipografía, <code>monospace</code> y filas alternas.</td>
+            <td><a href="Tabla Estudiantes.html" class="boton-enlace">Ver ejercicio</a></td>
+          </tr>
+          <tr>
+            <td><strong>03</strong></td>
+            <td>Conceptos de CSS</td>
+            <td>Modelo de caja, <code>overflow</code>, <code>box-sizing</code> y <code>display</code>.</td>
+            <td><a href="Conceptos.html" class="boton-enlace">Ver ejercicio</a></td>
+          </tr>
+          <tr>
+            <td><strong>04</strong></td>
+            <td>Formas Geométricas</td>
+            <td>Uso de bordes de colores para triángulos y <code>border-radius</code> para círculos/semicírculos.</td>
+            <td><a href="Formas Geometricas.html" class="boton-enlace">Ver ejercicio</a></td>
+          </tr>
+          <tr>
+            <td><strong>05</strong></td>
+            <td>Cajas CSS (Recuadros)</td>
+            <td>Estilos avanzados de cajas, bordes decorativos, gradientes y distribución en tabla.</td>
+            <td><a href="Iconos.html" class="boton-enlace">Ver ejercicio</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="autor">
+        Autor: [Miguel Ángel Urbano Calero]
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Qué es HTML, cómo funcionan las etiquetas y los atributos, qué es un elemento y cómo ha evolucionado el lenguaje.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 02: Introducción al documento HTML | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link" href="tema1.html"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link is-active" href="tema2.html" aria-current="page"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link" href="tema3.html"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link" href="tema4.html"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link" href="tema5.html"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link" href="tema6.html"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link" href="tema7.html"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link" href="tema8.html"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link" href="tema9.html"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 2 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">FUNDAMENTOS HTML · TEMA 02</p>
+        <h1>Introducción al documento HTML</h1>
+        <p class="lead">Qué es HTML, cómo funcionan las etiquetas y los atributos, qué es un elemento y cómo ha evolucionado el lenguaje.</p>
+        <div class="hero-meta"><span class="hero-pill">HTML</span><span class="hero-pill">El lenguaje que entiende el navegador</span><span class="hero-pill">Unidad 02/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Comprender qué es HTML y para qué se utiliza.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Diferenciar etiquetas, atributos y elementos.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Reconocer las principales versiones de HTML y XHTML.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#html">¿Qué es HTML?</a>
+<a href="#etiquetas">Etiquetas y sintaxis</a>
+<a href="#atributos">Atributos y comentarios</a>
+<a href="#elementos">¿Qué es un elemento HTML?</a>
+<a href="#img">Ejemplo: atributos de la imagen</a>
+<a href="#versiones">Versiones de HTML</a>
+<a href="#xhtml">Diferencias entre HTML y XHTML</a>
+<a href="#herramientas">Herramientas de diseño y validación</a></div>
+    </section>
+    <section class="topic-section" id="html">
+  <div class="section-heading"><span class="section-number">01</span><h2>¿Qué es HTML?</h2></div>
+  <div class="section-body"><p><strong>HTML</strong> significa <em>HyperText Markup Language</em>. Es un lenguaje de marcas que permite crear documentos web. El navegador interpreta su estructura y muestra el contenido al usuario.</p><p>En el modelo cliente-servidor, el navegador (cliente) solicita una página a un servidor mediante una dirección URL. El servidor devuelve el documento HTML y el navegador lo interpreta.</p></div>
+</section><section class="topic-section" id="etiquetas">
+  <div class="section-heading"><span class="section-number">02</span><h2>Etiquetas y sintaxis</h2></div>
+  <div class="section-body"><p>Las etiquetas se escriben entre los símbolos <code>&lt;</code> y <code>&gt;</code>. Muchas tienen una etiqueta de apertura y otra de cierre; la de cierre incluye una barra.</p><div class="code-card"><div class="code-caption">Ejemplo de etiquetas HTML. Algunas, como img y hr, no necesitan una etiqueta de cierre.</div><pre><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;
+&lt;p&gt;Este texto tiene una palabra &lt;strong&gt;importante&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;img src=&quot;foto.jpg&quot; alt=&quot;Descripción de la imagen&quot;&gt;</code></pre></div></div>
+</section><section class="topic-section" id="atributos">
+  <div class="section-heading"><span class="section-number">03</span><h2>Atributos y comentarios</h2></div>
+  <div class="section-body"><p>Los <strong>atributos</strong> añaden información a una etiqueta y se colocan en la etiqueta de apertura. Normalmente se escriben como nombre, signo igual y valor entre comillas.</p><div class="code-card"><div class="code-caption">Ejemplo de atributos src, alt, width, height, href y title.</div><pre><code>&lt;img src=&quot;paisaje.jpg&quot; alt=&quot;Montañas al amanecer&quot;
+     width=&quot;640&quot; height=&quot;360&quot;&gt;
+&lt;a href=&quot;https://ejemplo.es&quot; title=&quot;Visitar la página&quot;&gt;Visitar&lt;/a&gt;
+&lt;!-- Este comentario no aparece en el navegador --&gt;</code></pre></div><div class="info-grid"><div><h3>Atributos frecuentes</h3><p><code>href</code> indica el destino de un enlace; <code>id</code> identifica un elemento; <code>style</code> aplica estilos en línea; <code>title</code> aporta información adicional; <code>disabled</code> desactiva un control.</p></div><div><h3>Comentarios</h3><p>Se escriben entre <code>&lt;!--</code> y <code>--&gt;</code>. Sirven para documentar el código y no se muestran en la página.</p></div></div></div>
+</section><section class="topic-section" id="elementos">
+  <div class="section-heading"><span class="section-number">04</span><h2>¿Qué es un elemento HTML?</h2></div>
+  <div class="section-body"><p>Un <strong>elemento</strong> es el conjunto formado por la etiqueta de apertura, sus atributos (si los tiene), el contenido y la etiqueta de cierre. Por eso, una etiqueta y un elemento no son exactamente lo mismo.</p><div class="comparison"><div><span class="sample-tag">EN LÍNEA</span><h3>Elemento en línea</h3><p>Ocupa el espacio que necesita su contenido y puede aparecer dentro de una línea de texto. Ejemplo: <code>&lt;a&gt;</code> o <code>&lt;span&gt;</code>.</p></div><div><span class="sample-tag sample-tag-alt">EN BLOQUE</span><h3>Elemento de bloque</h3><p>Comienza en una línea nueva y normalmente ocupa todo el ancho disponible. Ejemplo: <code>&lt;p&gt;</code> o <code>&lt;div&gt;</code>.</p></div></div></div>
+</section><section class="topic-section" id="img">
+  <div class="section-heading"><span class="section-number">05</span><h2>Ejemplo: atributos de la imagen</h2></div>
+  <div class="section-body"><p>La etiqueta <code>&lt;img&gt;</code> permite incluir una imagen. Los apuntes destacan cuatro atributos:</p><ul><li><code>src</code>: ruta del archivo de imagen.</li><li><code>alt</code>: texto alternativo si no se puede mostrar la imagen.</li><li><code>width</code>: ancho.</li><li><code>height</code>: alto.</li></ul><p>Es importante escribir un texto alternativo útil, porque ayuda a comprender el contenido cuando la imagen no está disponible.</p></div>
+</section><section class="topic-section" id="versiones">
+  <div class="section-heading"><span class="section-number">06</span><h2>Versiones de HTML</h2></div>
+  <div class="section-body"><div class="table-wrap"><table><thead><tr><th>Versión</th><th>Características destacadas en los apuntes</th></tr></thead><tbody><tr><th>HTML 2.0</th><td>Versión sencilla; todavía no incluía tablas.</td></tr><tr><th>HTML 3.2</th><td>Incorporó tablas y opciones de diseño más avanzadas.</td></tr><tr><th>HTML 4.01</th><td>Mejoró los formularios y permitió integrar scripts.</td></tr><tr><th>HTML5</th><td>Añadió etiquetas semánticas y soporte directo para audio y vídeo.</td></tr></tbody></table></div><p>El navegador interpreta el HTML. Como puede haber diferencias de compatibilidad, conviene comprobar cómo se visualiza la página en distintos navegadores.</p></div>
+</section><section class="topic-section" id="xhtml">
+  <div class="section-heading"><span class="section-number">07</span><h2>Diferencias entre HTML y XHTML</h2></div>
+  <div class="section-body"><p><strong>XHTML</strong> es una formulación de HTML basada en XML. Por eso exige una sintaxis más estricta. En XHTML se deben cerrar los elementos, respetar el anidamiento, escribir los nombres en minúsculas y poner entre comillas los valores de los atributos.</p><p>HTML moderno es más flexible en algunos aspectos, pero mantener un código bien ordenado y cerrar correctamente las etiquetas sigue siendo una buena práctica.</p></div>
+</section><section class="topic-section" id="herramientas">
+  <div class="section-heading"><span class="section-number">08</span><h2>Herramientas de diseño y validación</h2></div>
+  <div class="section-body"><p>Se puede escribir HTML en editores como Visual Studio Code o Notepad++. También existen editores online y herramientas de validación que comprueban errores de sintaxis y ayudan a detectar etiquetas o atributos mal utilizados.</p><p>La validación no sustituye a probar la página en el navegador, pero es una forma útil de revisar el código.</p></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>HTML aporta la estructura del documento. Las etiquetas identifican elementos, los atributos añaden información y el navegador interpreta el conjunto.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Crear una página con varias imágenes y utilizar correctamente src, alt, width y height. Después, validar un documento con sintaxis XHTML para detectar errores de cierre, anidamiento o atributos.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="tema1.html"><small>← Tema anterior</small><strong>01. Lenguajes de marcas</strong></a><a href="tema3.html"><small>Tema siguiente →</small><strong>03. Estructura de un documento HTML</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Las etiquetas que enriquecen el cuerpo de una página y conectan sus contenidos con otros documentos.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 04: Identificación de etiquetas y atributos | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link" href="tema1.html"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link" href="tema2.html"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link" href="tema3.html"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link is-active" href="tema4.html" aria-current="page"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link" href="tema5.html"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link" href="tema6.html"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link" href="tema7.html"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link" href="tema8.html"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link" href="tema9.html"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 4 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">CONTENIDO HTML · TEMA 04</p>
+        <h1>Identificación de etiquetas y atributos</h1>
+        <p class="lead">Las etiquetas que enriquecen el cuerpo de una página y conectan sus contenidos con otros documentos.</p>
+        <div class="hero-meta"><span class="hero-pill">HTML</span><span class="hero-pill">Texto, enlaces, listas e imágenes</span><span class="hero-pill">Unidad 04/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Aplicar etiquetas de formato de texto.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Crear enlaces internos y externos.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Organizar información mediante listas e incorporar contenido externo.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#texto">Etiquetas para dar significado al texto</a>
+<a href="#enlaces">Enlaces con la etiqueta a</a>
+<a href="#listas">Listas ordenadas, no ordenadas y de definición</a>
+<a href="#imagenes">Contenido incrustado: imágenes</a>
+<a href="#iframe">Documentos HTML incrustados</a></div>
+    </section>
+    <section class="topic-section" id="texto">
+  <div class="section-heading"><span class="section-number">01</span><h2>Etiquetas para dar significado al texto</h2></div>
+  <div class="section-body"><p>Las etiquetas de texto permiten destacar partes de un contenido, añadir significado o modificar cómo se presenta. Es importante elegir la etiqueta según el significado, no solo por su apariencia.</p><div class="tag-cloud"><code>&lt;br&gt;</code><code>&lt;span&gt;</code><code>&lt;em&gt;</code><code>&lt;strong&gt;</code><code>&lt;sub&gt;</code><code>&lt;sup&gt;</code><code>&lt;b&gt;</code><code>&lt;s&gt;</code><code>&lt;i&gt;</code><code>&lt;small&gt;</code><code>&lt;mark&gt;</code></div><div class="code-card"><div class="code-caption">Ejemplos de etiquetas de texto.</div><pre><code>&lt;p&gt;HTML es &lt;strong&gt;importante&lt;/strong&gt; para la web.&lt;/p&gt;
+&lt;p&gt;Este texto tiene &lt;em&gt;énfasis&lt;/em&gt; y una palabra &lt;mark&gt;resaltada&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;Agua: H&lt;sub&gt;2&lt;/sub&gt;O. Potencia: 2&lt;sup&gt;3&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Nota secundaria.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Línea uno&lt;br&gt;Línea dos&lt;/p&gt;</code></pre></div><p><code>&lt;span&gt;</code> se utiliza como contenedor en línea cuando no hay una etiqueta semántica más adecuada. En los apuntes también se citan <code>&lt;cite&gt;</code>, <code>&lt;q&gt;</code>, <code>&lt;dfn&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;time&gt;</code> y <code>&lt;kbd&gt;</code>.</p></div>
+</section><section class="topic-section" id="enlaces">
+  <div class="section-heading"><span class="section-number">02</span><h2>Enlaces con la etiqueta a</h2></div>
+  <div class="section-body"><p>Los enlaces conectan documentos y permiten navegar entre distintas partes de una web o hacia páginas externas. Se crean con <code>&lt;a&gt;</code> y el atributo <code>href</code> indica el destino.</p><div class="code-card"><div class="code-caption">Ejemplos de enlaces externos, internos y a un archivo.</div><pre><code>&lt;a href=&quot;https://www.ejemplo.es&quot;&gt;Visitar la web&lt;/a&gt;
+&lt;a href=&quot;#contacto&quot;&gt;Ir al contacto&lt;/a&gt;
+&lt;a href=&quot;documento.pdf&quot; target=&quot;_blank&quot;&gt;Abrir documento&lt;/a&gt;
+
+&lt;section id=&quot;contacto&quot;&gt;
+  &lt;h2&gt;Contacto&lt;/h2&gt;
+&lt;/section&gt;</code></pre></div><p>El atributo <code>target</code> indica dónde se abre el destino: <code>_self</code> utiliza la pestaña actual y <code>_blank</code> abre una nueva. Los apuntes también describen <code>_parent</code> y <code>_top</code>, relacionados con marcos.</p></div>
+</section><section class="topic-section" id="listas">
+  <div class="section-heading"><span class="section-number">03</span><h2>Listas ordenadas, no ordenadas y de definición</h2></div>
+  <div class="section-body"><p>HTML ofrece tres tipos principales de listas:</p><div class="comparison"><div><h3><code>&lt;ol&gt;</code></h3><p>Lista ordenada. Los elementos aparecen numerados o siguiendo un tipo de orden.</p></div><div><h3><code>&lt;ul&gt;</code></h3><p>Lista no ordenada. Los elementos se muestran con viñetas.</p></div><div><h3><code>&lt;dl&gt;</code></h3><p>Lista de definiciones, con términos (<code>dt</code>) y sus descripciones (<code>dd</code>).</p></div></div><p>Los elementos de las listas ordenadas y no ordenadas se escriben con <code>&lt;li&gt;</code>. También se pueden anidar listas para crear subapartados.</p><div class="code-card"><div class="code-caption">Ejemplo de lista anidada.</div><pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML
+    &lt;ul&gt;
+      &lt;li&gt;Etiquetas&lt;/li&gt;
+      &lt;li&gt;Atributos&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div></div>
+</section><section class="topic-section" id="imagenes">
+  <div class="section-heading"><span class="section-number">04</span><h2>Contenido incrustado: imágenes</h2></div>
+  <div class="section-body"><p>La etiqueta <code>&lt;img&gt;</code> incorpora una imagen externa al documento. Los atributos principales son:</p><ul><li><code>src</code>: ubicación del archivo.</li><li><code>alt</code>: descripción alternativa.</li><li><code>title</code>: información adicional que puede mostrarse al pasar el cursor.</li><li><code>width</code> y <code>height</code>: dimensiones de la imagen.</li></ul><div class="code-card"><div class="code-caption">Ejemplo de imagen con texto alternativo.</div><pre><code>&lt;img src=&quot;img/paisaje.jpg&quot;
+     alt=&quot;Montañas y un lago&quot;
+     width=&quot;640&quot; height=&quot;360&quot;&gt;</code></pre></div></div>
+</section><section class="topic-section" id="iframe">
+  <div class="section-heading"><span class="section-number">05</span><h2>Documentos HTML incrustados</h2></div>
+  <div class="section-body"><p><code>&lt;iframe&gt;</code> permite mostrar otro documento HTML dentro de la página actual. Se suele usar para insertar mapas, recursos externos o contenido compartido desde otros servicios.</p><div class="code-card"><div class="code-caption">Ejemplo básico de iframe.</div><pre><code>&lt;iframe src=&quot;https://ejemplo.es/recurso&quot;
+        title=&quot;Recurso de ejemplo&quot;
+        width=&quot;600&quot; height=&quot;350&quot;&gt;
+&lt;/iframe&gt;</code></pre></div><p>Es recomendable incluir un título descriptivo y comprobar que el servicio externo permite ser insertado en otra página.</p></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>Las etiquetas de texto aportan significado, los enlaces conectan contenidos, las listas organizan la información y las imágenes o iframes añaden recursos externos.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Crear un pequeño blog sobre varios países: incluir texto con énfasis, enlaces a otras páginas, listas de destinos, fotografías con texto alternativo y, cuando sea apropiado, un documento incrustado.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="tema3.html"><small>← Tema anterior</small><strong>03. Estructura de un documento HTML</strong></a><a href="tema5.html"><small>Tema siguiente →</small><strong>05. Tablas y formularios</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>

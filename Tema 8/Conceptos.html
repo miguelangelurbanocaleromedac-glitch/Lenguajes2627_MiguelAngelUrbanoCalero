@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Miguel Ángel Urbano Calero">
+    <title>Ejercicio 3 - Cuatro Páginas HTML Conceptos CSS</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f3f7f6;
+        color: #263b39;
+        margin: 0;
+        padding: 35px 20px;
+      }
+
+      .header-seccion {
+        max-width: 1000px;
+        margin: 0 auto 32px auto;
+        padding: 18px 24px;
+        background-color: #e8f1ee;
+        border-left: 5px solid #6b9f91;
+        border-radius: 8px;
+      }
+
+      h1 {
+        color: #285b53;
+        font-size: 25px;
+        line-height: 1.4;
+      }
+
+      ul.conceptos-lista {
+        color: #39766b;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.8;
+      }
+
+      .tarjetas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+        gap: 24px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .tarjeta-concepto {
+        background-color: #ffffff;
+        border: 1px solid #d1dfda;
+        border-radius: 10px;
+        padding: 24px;
+        box-shadow: 0 3px 10px rgba(35, 75, 65, 0.06);
+      }
+
+      .tarjeta-concepto h2 {
+        color: #39766b;
+        font-size: 20px;
+        margin-top: 0;
+        border-bottom: 2px solid #dce8e3;
+        padding-bottom: 8px;
+      }
+
+      .teoria {
+        font-size: 14px;
+        color: #526762;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .demo-box-model {
+        
+        width: 200px;
+        padding: 15px;
+        border: 5px solid #4d8b7d;
+        margin: 10px 0;
+        background-color: #eaf4f0;
+      }
+
+      .demo-overflow {
+        width: 250px;
+        height: 70px;
+        overflow: auto;
+        border: 2px solid #c27b58;
+        padding: 10px;
+        background-color: #fbf1eb;
+      }
+
+      .demo-box-sizing {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        border: 6px solid #6b947e;
+        background-color: #edf5ee;
+        font-weight: bold;
+      }
+
+      .demo-display-block {
+        display: block;
+        background-color: #f2d58a;
+        padding: 8px;
+        margin-bottom: 6px;
+      }
+
+      .demo-display-inline {
+        display: inline;
+        background-color: #c27b58;
+        color: white;
+        padding: 4px 8px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="header-seccion">
+      <h1>Conceptos básicos de CSS</h1>
+      <ul class="conceptos-lista">
+        <li>Modelo de caja (Box Model)</li>
+        <li>Propiedad overflow</li>
+        <li>Propiedad box-sizing</li>
+        <li>Propiedad display</li>
+      </ul>
+    </div>
+
+    <div class="tarjetas-grid">
+
+      <div class="tarjeta-concepto">
+        <h2>1. Modelo de Caja (Box Model)</h2>
+        <p class="teoria">
+          <strong>Explicación teórica:</strong> El Box Model define cómo se estructuran y calculan los elementos HTML en la página, componiéndose de cuatro capas: contenido, padding, border y margin.
+        </p>
+        <div class="demo-box-model">
+        </div>
+      </div>
+
+      <div class="tarjeta-concepto">
+        <h2>2. Propiedad overflow</h2>
+        <p class="teoria">
+          <strong>Explicación teórica:</strong> La propiedad overflow determina cómo se gestiona el contenido visual cuando este excede las dimensiones de su contenedor (visible, hidden, scroll, auto).
+        </p>
+        <div class="demo-overflow">
+          Texto largo que excede los 70px de alto. Gracias a la regla CSS <code>overflow: auto;</code> se activa automáticamente la barra de desplazamiento.
+        </div>
+      </div>
+
+      <div class="tarjeta-concepto">
+        <h2>3. Propiedad box-sizing</h2>
+        <p class="teoria">
+          <strong>Explicación teórica:</strong> Define cómo se calcula el ancho y alto total. Con <code>border-box</code>, el padding y el border se incluyen en las dimensiones declaradas.
+        </p>
+        <div class="demo-box-sizing">
+          box-sizing: border-box ajusta todo el tamaño sin romper el diseño.
+        </div>
+      </div>
+
+      <div class="tarjeta-concepto">
+        <h2>4. Propiedad display</h2>
+        <p class="teoria">
+          <strong>Explicación teórica:</strong> Especifica el tipo de caja de renderizado de un elemento en el flujo del documento (block, inline, inline-block, flex, grid, none).
+        </p>
+        <div>
+          <div class="demo-display-block">display: block (Fila completa)</div>
+          <span class="demo-display-inline">display: inline A</span>
+          <span class="demo-display-inline">display: inline B</span>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La sintaxis de CSS, las formas de incluir estilos, los selectores, la herencia, las unidades de medida y los colores.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 07: Hojas de estilo. CSS | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link" href="tema1.html"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link" href="tema2.html"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link" href="tema3.html"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link" href="tema4.html"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link" href="tema5.html"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link" href="tema6.html"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link is-active" href="tema7.html" aria-current="page"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link" href="tema8.html"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link" href="tema9.html"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 7 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">PRIMEROS PASOS CON CSS · TEMA 07</p>
+        <h1>Hojas de estilo. CSS</h1>
+        <p class="lead">La sintaxis de CSS, las formas de incluir estilos, los selectores, la herencia, las unidades de medida y los colores.</p>
+        <div class="hero-meta"><span class="hero-pill">CSS</span><span class="hero-pill">Separar el contenido de su apariencia</span><span class="hero-pill">Unidad 07/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Comprender la función de CSS.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Aplicar selectores para elegir elementos.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Entender herencia, medidas y formatos de color.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#css">¿Qué es CSS?</a>
+<a href="#incluir">Tres formas de incluir CSS</a>
+<a href="#sintaxis">Sintaxis de una regla CSS</a>
+<a href="#selectores">Selectores principales</a>
+<a href="#herencia">Herencia y conflictos entre estilos</a>
+<a href="#unidades">Unidades de medida</a>
+<a href="#colores">Formas de representar colores</a></div>
+    </section>
+    <section class="topic-section" id="css">
+  <div class="section-heading"><span class="section-number">01</span><h2>¿Qué es CSS?</h2></div>
+  <div class="section-body"><p><strong>CSS</strong> significa <em>Cascading Style Sheets</em> (hojas de estilo en cascada). Se utiliza para controlar la presentación visual de un documento HTML: colores, tamaños, fuentes, espacios y distribución.</p><p>HTML define el contenido y su estructura; CSS define cómo se muestra. Separarlos permite cambiar el diseño sin tener que reescribir el contenido.</p></div>
+</section><section class="topic-section" id="incluir">
+  <div class="section-heading"><span class="section-number">02</span><h2>Tres formas de incluir CSS</h2></div>
+  <div class="section-body"><div class="tool-grid"><article class="tool-card"><h3>En línea</h3><p>Se escribe el estilo en el atributo <code>style</code> de una etiqueta. Es rápido, pero difícil de mantener cuando se repite.</p></article><article class="tool-card"><h3>Interno</h3><p>Se coloca una regla dentro de <code>&lt;style&gt;</code> en la cabecera HTML.</p></article><article class="tool-card"><h3>Externo</h3><p>Se guardan las reglas en un archivo .css y se enlaza con <code>&lt;link&gt;</code>. Es la opción más cómoda para un sitio con varias páginas.</p></article></div><div class="code-card"><div class="code-caption">Ejemplo de hoja de estilos externa.</div><pre><code>&lt;!-- En el head del HTML --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+
+/* En el archivo style.css */
+p {
+  color: #243b53;
+  text-align: left;
+}</code></pre></div></div>
+</section><section class="topic-section" id="sintaxis">
+  <div class="section-heading"><span class="section-number">03</span><h2>Sintaxis de una regla CSS</h2></div>
+  <div class="section-body"><p>Una regla CSS tiene un <strong>selector</strong> y un bloque de declaraciones. Cada declaración contiene una propiedad y un valor.</p><div class="code-card"><div class="code-caption">Selector: h1 · Propiedades: color, font-size y text-align · Valores: los indicados.</div><pre><code>h1 {
+  color: #0b7a75;
+  font-size: 2rem;
+  text-align: center;
+}</code></pre></div><p>Las declaraciones se separan con punto y coma. Los comentarios empiezan con <code>/*</code> y terminan con <code>*/</code>.</p></div>
+</section><section class="topic-section" id="selectores">
+  <div class="section-heading"><span class="section-number">04</span><h2>Selectores principales</h2></div>
+  <div class="section-body"><div class="table-wrap"><table><thead><tr><th>Selector</th><th>Ejemplo</th><th>Qué selecciona</th></tr></thead><tbody><tr><th>Universal</th><td><code>*</code></td><td>Todos los elementos.</td></tr><tr><th>Etiqueta</th><td><code>p</code></td><td>Todos los párrafos.</td></tr><tr><th>Clase</th><td><code>.aviso</code></td><td>Elementos con class="aviso".</td></tr><tr><th>Identificador</th><td><code>#cabecera</code></td><td>El elemento con ese id único.</td></tr><tr><th>Descendiente</th><td><code>nav a</code></td><td>Enlaces dentro de nav.</td></tr><tr><th>Hijo directo</th><td><code>ul &gt; li</code></td><td>li que son hijos directos de ul.</td></tr><tr><th>Adyacente</th><td><code>h2 + p</code></td><td>El párrafo que sigue inmediatamente al h2.</td></tr><tr><th>Atributo</th><td><code>input[type="email"]</code></td><td>Campos con ese atributo y valor.</td></tr><tr><th>Agrupación</th><td><code>h1, h2</code></td><td>Los dos tipos de encabezado.</td></tr></tbody></table></div><div class="code-card"><div class="code-caption">Ejemplos de selectores.</div><pre><code>.tarjeta { background-color: #eef7f5; }
+#principal { max-width: 900px; }
+nav a { text-decoration: none; }
+input[type=&quot;email&quot;] { border: 1px solid #8aa; }</code></pre></div></div>
+</section><section class="topic-section" id="herencia">
+  <div class="section-heading"><span class="section-number">05</span><h2>Herencia y conflictos entre estilos</h2></div>
+  <div class="section-body"><p>Algunas propiedades se heredan desde un elemento padre a sus elementos hijos. Por ejemplo, si un contenedor tiene un color de texto, sus párrafos pueden recibirlo automáticamente.</p><p>Si una regla más concreta define otro valor para un hijo, ese estilo puede prevalecer. Cuando dos reglas tienen la misma especificidad, normalmente se aplica la que aparece después. El inspector del navegador ayuda a ver qué reglas están actuando.</p></div>
+</section><section class="topic-section" id="unidades">
+  <div class="section-heading"><span class="section-number">06</span><h2>Unidades de medida</h2></div>
+  <div class="section-body"><div class="table-wrap"><table><thead><tr><th>Tipo</th><th>Unidades</th><th>Uso</th></tr></thead><tbody><tr><th>Absolutas</th><td><code>px</code>, <code>cm</code>, <code>mm</code>, <code>in</code>, <code>pt</code>, <code>pc</code></td><td>Expresan una medida concreta.</td></tr><tr><th>Relativas</th><td><code>em</code>, <code>rem</code>, <code>%</code>, <code>vw</code>, <code>vh</code></td><td>Dependen de la fuente, el elemento padre o el tamaño de la ventana.</td></tr></tbody></table></div><p><code>em</code> se relaciona con el tamaño de fuente del elemento padre; <code>rem</code> con el tamaño de fuente raíz; <code>%</code> con una referencia del elemento contenedor; <code>vw</code> y <code>vh</code> con el ancho y alto de la ventana.</p></div>
+</section><section class="topic-section" id="colores">
+  <div class="section-heading"><span class="section-number">07</span><h2>Formas de representar colores</h2></div>
+  <div class="section-body"><p>En CSS se puede indicar un color mediante su nombre, el modelo RGB o un valor hexadecimal. En RGB cada componente rojo, verde y azul puede tomar un valor de 0 a 255.</p><div class="code-card"><div class="code-caption">Tres formas diferentes de indicar colores.</div><pre><code>h1 { color: red; }
+p  { color: rgb(20, 90, 130); }
+.card { background-color: #e8f3f2; }</code></pre></div><p>Es recomendable mantener una paleta coherente y comprobar que existe suficiente contraste entre el texto y el fondo para facilitar la lectura.</p></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>CSS controla la presentación del HTML. Las reglas se aplican mediante selectores y propiedades, y la cascada decide qué estilo prevalece.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Aplicar una hoja CSS externa a una página HTML. Crear reglas para etiquetas, clases e identificadores; probar diferentes unidades de medida y elegir una paleta de colores coherente.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="tema6.html"><small>← Tema anterior</small><strong>06. La web semántica. HTML5</strong></a><a href="tema8.html"><small>Tema siguiente →</small><strong>08. Propiedades CSS</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>

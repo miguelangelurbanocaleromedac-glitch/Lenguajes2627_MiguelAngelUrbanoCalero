@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El flujo normal, el posicionamiento, float y clear, y algunas propiedades de CSS3 para crear diseños más completos.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 09: Disposición de los elementos HTML. CSS3 | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link" href="tema1.html"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link" href="tema2.html"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link" href="tema3.html"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link" href="tema4.html"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link" href="tema5.html"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link" href="tema6.html"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link" href="tema7.html"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link" href="tema8.html"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link is-active" href="tema9.html" aria-current="page"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 9 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">CSS · MAQUETACIÓN · TEMA 09</p>
+        <h1>Disposición de los elementos HTML. CSS3</h1>
+        <p class="lead">El flujo normal, el posicionamiento, float y clear, y algunas propiedades de CSS3 para crear diseños más completos.</p>
+        <div class="hero-meta"><span class="hero-pill">CSS</span><span class="hero-pill">Colocar elementos y añadir acabados visuales</span><span class="hero-pill">Unidad 09/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Diferenciar los métodos de posicionamiento.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Usar float y clear para organizar elementos.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Reconocer propiedades visuales y efectos de CSS3.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#flujo">Disposición y flujo normal</a>
+<a href="#position">La propiedad position</a>
+<a href="#float">Posicionamiento flotante: float y clear</a>
+<a href="#css3">Novedades y propiedades CSS3</a>
+<a href="#acabados">Bordes, sombras, opacidad y gradientes</a>
+<a href="#fuentes">Fuentes web y multicolumnas</a>
+<a href="#movimiento">Transformaciones, transiciones y animaciones</a></div>
+    </section>
+    <section class="topic-section" id="flujo">
+  <div class="section-heading"><span class="section-number">01</span><h2>Disposición y flujo normal</h2></div>
+  <div class="section-body"><p>Por defecto, los elementos en línea aparecen uno junto a otro mientras que los elementos de bloque comienzan en una línea nueva. CSS permite cambiar esa disposición para colocar imágenes, párrafos, menús y otras cajas donde sea necesario.</p></div>
+</section><section class="topic-section" id="position">
+  <div class="section-heading"><span class="section-number">02</span><h2>La propiedad position</h2></div>
+  <div class="section-body"><div class="table-wrap"><table><thead><tr><th>Valor</th><th>Comportamiento</th></tr></thead><tbody><tr><th>static</th><td>Posición normal del documento. Es el valor por defecto.</td></tr><tr><th>relative</th><td>Permite desplazar la caja respecto a su posición original.</td></tr><tr><th>absolute</th><td>Posiciona la caja respecto a su contenedor de referencia.</td></tr><tr><th>fixed</th><td>La caja permanece en una posición de la ventana aunque se haga scroll.</td></tr></tbody></table></div><p>Para indicar el desplazamiento se utilizan <code>top</code>, <code>bottom</code>, <code>left</code> y <code>right</code>. <code>z-index</code> controla qué elemento queda por delante cuando varias cajas se superponen.</p><div class="code-card"><div class="code-caption">Ejemplo de elemento fijo en la ventana.</div><pre><code>.aviso {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+}</code></pre></div></div>
+</section><section class="topic-section" id="float">
+  <div class="section-heading"><span class="section-number">03</span><h2>Posicionamiento flotante: float y clear</h2></div>
+  <div class="section-body"><p><code>float</code> permite que una caja se coloque a la izquierda o a la derecha y que el contenido fluya a su alrededor. <code>clear</code> evita que un elemento quede junto a elementos flotantes en el lado indicado.</p><div class="code-card"><div class="code-caption">Ejemplo de float y clear.</div><pre><code>.foto { float: left; margin-right: 16px; }
+.fin-flotantes { clear: both; }</code></pre></div><p>En los apuntes se utiliza este mecanismo para crear un menú horizontal y para alinear imágenes a los lados de artículos. También se observa que, al reducir el ancho de la ventana, las cajas pueden saltar a otra línea si ya no caben.</p></div>
+</section><section class="topic-section" id="css3">
+  <div class="section-heading"><span class="section-number">04</span><h2>Novedades y propiedades CSS3</h2></div>
+  <div class="section-body"><p>CSS3 amplía las posibilidades de presentación con nuevas propiedades y efectos. En los apuntes se destacan los bordes redondeados, sombras, opacidad, gradientes, fuentes web, multicolumnas y transformaciones.</p></div>
+</section><section class="topic-section" id="acabados">
+  <div class="section-heading"><span class="section-number">05</span><h2>Bordes, sombras, opacidad y gradientes</h2></div>
+  <div class="section-body"><div class="feature-grid"><article class="feature-card"><span class="feature-icon">◒</span><h3>Bordes redondeados</h3><p><code>border-radius</code> redondea las esquinas de una caja.</p></article><article class="feature-card"><span class="feature-icon">▧</span><h3>Sombras</h3><p><code>box-shadow</code> crea sombras de caja y <code>text-shadow</code> de texto.</p></article><article class="feature-card"><span class="feature-icon">◐</span><h3>Opacidad</h3><p><code>opacity</code> controla la transparencia entre 0 y 1.</p></article><article class="feature-card"><span class="feature-icon">▤</span><h3>Gradientes</h3><p><code>linear-gradient()</code> y <code>radial-gradient()</code> mezclan colores.</p></article></div><div class="code-card"><div class="code-caption">Ejemplo de acabados CSS3.</div><pre><code>.tarjeta {
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(20, 40, 60, .12);
+  background: linear-gradient(120deg, #e9f5f2, #ffffff);
+}</code></pre></div></div>
+</section><section class="topic-section" id="fuentes">
+  <div class="section-heading"><span class="section-number">06</span><h2>Fuentes web y multicolumnas</h2></div>
+  <div class="section-body"><p>La regla <code>@font-face</code> permite declarar una fuente externa con un nombre que después se utilizará en <code>font-family</code>. También se puede enlazar un servicio de fuentes web.</p><p>Para distribuir texto en varias columnas se utilizan <code>column-count</code> (número de columnas), <code>column-gap</code> (separación) y <code>column-rule</code> (línea divisoria).</p><div class="code-card"><div class="code-caption">Ejemplo de multicolumnas.</div><pre><code>.texto-columnas {
+  column-count: 2;
+  column-gap: 28px;
+  column-rule: 1px solid #d8e3e1;
+}</code></pre></div></div>
+</section><section class="topic-section" id="movimiento">
+  <div class="section-heading"><span class="section-number">07</span><h2>Transformaciones, transiciones y animaciones</h2></div>
+  <div class="section-body"><p><code>transform</code> permite transformar un elemento. Los apuntes presentan estas funciones principales:</p><ul><li><code>translate(x, y)</code>: desplaza el elemento.</li><li><code>rotate(x)</code>: lo gira un número de grados.</li><li><code>scale(x, y)</code>: cambia su escala.</li></ul><p>Las <strong>transiciones</strong> suavizan el cambio entre estados, por ejemplo al pasar el cursor por encima de un botón. Las <strong>animaciones</strong> permiten definir secuencias de cambios mediante reglas CSS.</p><div class="code-card"><div class="code-caption">Ejemplo de transición y transformación.</div><pre><code>.boton {
+  transition: transform .2s ease, background-color .2s ease;
+}
+.boton:hover {
+  transform: translateY(-3px) scale(1.02);
+}</code></pre></div></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>CSS permite controlar dónde aparece cada elemento y mejorar su aspecto con bordes, sombras, gradientes, fuentes, transformaciones y transiciones.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Crear un menú horizontal con varias opciones, aplicar un efecto hover y diseñar una plantilla con cabecera, artículos, lateral y pie de página. Utilizar float para alinear imágenes y propiedades CSS3 para los acabados.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="tema8.html"><small>← Tema anterior</small><strong>08. Propiedades CSS</strong></a><a href="index.html#temario"><small>Final del recorrido ↑</small><strong>Volver a los nueve temas</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>

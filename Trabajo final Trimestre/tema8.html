@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Propiedades de texto, fuentes, listas y tablas; pseudoclases, pseudoelementos y el modelo de cajas.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 08: Propiedades CSS | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link" href="tema1.html"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link" href="tema2.html"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link" href="tema3.html"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link" href="tema4.html"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link" href="tema5.html"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link" href="tema6.html"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link" href="tema7.html"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link is-active" href="tema8.html" aria-current="page"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link" href="tema9.html"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 8 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">CSS · PROPIEDADES · TEMA 08</p>
+        <h1>Propiedades CSS</h1>
+        <p class="lead">Propiedades de texto, fuentes, listas y tablas; pseudoclases, pseudoelementos y el modelo de cajas.</p>
+        <div class="hero-meta"><span class="hero-pill">CSS</span><span class="hero-pill">Dar forma, ritmo y detalle al contenido</span><span class="hero-pill">Unidad 08/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Modificar textos, fuentes, listas y tablas con CSS.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Utilizar pseudoclases y pseudoelementos.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Comprender el modelo de cajas y sus dimensiones.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#texto">Propiedades del texto</a>
+<a href="#fuentes">Propiedades de las fuentes</a>
+<a href="#listas">Propiedades de las listas</a>
+<a href="#pseudo">Pseudoclases y pseudoelementos</a>
+<a href="#tablas">Propiedades de las tablas</a>
+<a href="#cajas">El modelo de cajas</a>
+<a href="#medidas-caja">Tamaño y comportamiento de las cajas</a></div>
+    </section>
+    <section class="topic-section" id="texto">
+  <div class="section-heading"><span class="section-number">01</span><h2>Propiedades del texto</h2></div>
+  <div class="section-body"><p>Las propiedades de texto permiten controlar la alineación, el color, el fondo, el subrayado, el espaciado y la transformación de mayúsculas o minúsculas.</p><div class="tag-cloud"><code>text-align</code><code>color</code><code>background-color</code><code>text-decoration</code><code>letter-spacing</code><code>word-spacing</code><code>text-transform</code><code>line-height</code></div><div class="code-card"><div class="code-caption">Ejemplo de propiedades del texto.</div><pre><code>p {
+  text-align: justify;
+  color: #243b53;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}</code></pre></div></div>
+</section><section class="topic-section" id="fuentes">
+  <div class="section-heading"><span class="section-number">02</span><h2>Propiedades de las fuentes</h2></div>
+  <div class="section-body"><p>Las propiedades de fuentes controlan la familia tipográfica, el tamaño, el estilo y el grosor de los caracteres.</p><div class="table-wrap"><table><thead><tr><th>Propiedad</th><th>Función</th></tr></thead><tbody><tr><th>font-family</th><td>Familia de la fuente.</td></tr><tr><th>font-size</th><td>Tamaño del texto.</td></tr><tr><th>font-style</th><td>Estilo normal o cursiva.</td></tr><tr><th>font-weight</th><td>Grosor, por ejemplo normal o bold.</td></tr></tbody></table></div><p>Se pueden usar fuentes seguras instaladas en el sistema o incorporar otras fuentes mediante servicios como Google Fonts o la regla <code>@font-face</code>.</p></div>
+</section><section class="topic-section" id="listas">
+  <div class="section-heading"><span class="section-number">03</span><h2>Propiedades de las listas</h2></div>
+  <div class="section-body"><p>Con CSS se puede cambiar el tipo de viñeta, usar una imagen como marcador y elegir la posición de la viñeta.</p><ul><li><code>list-style-type</code>: tipo de viñeta (disc, circle, square o none).</li><li><code>list-style-image</code>: imagen que se usa como viñeta.</li><li><code>list-style-position</code>: coloca la viñeta dentro o fuera del bloque de texto.</li></ul></div>
+</section><section class="topic-section" id="pseudo">
+  <div class="section-heading"><span class="section-number">04</span><h2>Pseudoclases y pseudoelementos</h2></div>
+  <div class="section-body"><p>Las <strong>pseudoclases</strong> seleccionan un elemento según su posición o estado. Se escriben con dos puntos. Los <strong>pseudoelementos</strong> permiten dar estilo a una parte concreta del contenido y se escriben con dos puntos dobles.</p><div class="table-wrap"><table><thead><tr><th>Selector</th><th>Significado</th></tr></thead><tbody><tr><td><code>:first-child</code></td><td>Primer hijo.</td></tr><tr><td><code>:last-child</code></td><td>Último hijo.</td></tr><tr><td><code>:nth-child(n)</code></td><td>Hijo según su posición; admite odd y even.</td></tr><tr><td><code>:hover</code></td><td>El cursor pasa por encima.</td></tr><tr><td><code>:focus</code></td><td>El elemento recibe el foco.</td></tr><tr><td><code>:active</code></td><td>El elemento está siendo activado.</td></tr><tr><td><code>:link</code> / <code>:visited</code></td><td>Enlace no visitado / visitado.</td></tr><tr><td><code>::first-letter</code></td><td>Primera letra.</td></tr><tr><td><code>::first-line</code></td><td>Primera línea.</td></tr><tr><td><code>::before</code> / <code>::after</code></td><td>Contenido antes o después.</td></tr></tbody></table></div><div class="code-card"><div class="code-caption">Ejemplos de pseudoclases y pseudoelementos.</div><pre><code>li:first-child { color: #087f74; }
+li:nth-child(even) { background: #eef5f4; }
+a:hover { text-decoration: underline; }
+p::first-letter { font-size: 1.5em; }
+.note::before { content: &quot;Nota: &quot;; }</code></pre></div></div>
+</section><section class="topic-section" id="tablas">
+  <div class="section-heading"><span class="section-number">05</span><h2>Propiedades de las tablas</h2></div>
+  <div class="section-body"><p>Además de los estilos comunes, las tablas disponen de propiedades para controlar la distribución y los bordes.</p><ul><li><code>caption-side</code>: coloca el título arriba o abajo.</li><li><code>table-layout</code>: define cómo se calcula la distribución de columnas.</li><li><code>border-collapse</code>: une o separa los bordes.</li><li><code>border-spacing</code>: establece la separación entre celdas.</li><li><code>empty-cells</code>: controla la visualización de celdas vacías.</li><li><code>vertical-align</code>: alinea verticalmente el contenido.</li></ul></div>
+</section><section class="topic-section" id="cajas">
+  <div class="section-heading"><span class="section-number">06</span><h2>El modelo de cajas</h2></div>
+  <div class="section-body"><p>CSS considera cada elemento HTML como una caja rectangular. El modelo de cajas explica el espacio que ocupa cada elemento y la separación que mantiene con los demás.</p><div class="box-model"><div class="box-margin"><span>margin · margen</span><div class="box-border"><span>border · borde</span><div class="box-padding"><span>padding · relleno</span><div class="box-content">content<br>contenido</div></div></div></div></div><div class="legend-grid"><span><b>Content</b> El texto, imagen o contenido.</span><span><b>Padding</b> Espacio entre contenido y borde.</span><span><b>Border</b> Línea que rodea el contenido y el relleno.</span><span><b>Margin</b> Espacio exterior entre cajas.</span></div></div>
+</section><section class="topic-section" id="medidas-caja">
+  <div class="section-heading"><span class="section-number">07</span><h2>Tamaño y comportamiento de las cajas</h2></div>
+  <div class="section-body"><p>Las dimensiones se controlan con <code>width</code>, <code>height</code>, <code>min-width</code>, <code>max-width</code>, <code>min-height</code> y <code>max-height</code>. Con <code>auto</code>, el navegador calcula el tamaño según el contenido y el espacio disponible.</p><p>Otras propiedades importantes son:</p><ul><li><code>padding</code>, <code>margin</code> y <code>border</code>: controlan el espacio interior, exterior y el borde.</li><li><code>background-image</code>, <code>background-position</code>, <code>background-size</code>, <code>background-repeat</code> y <code>background-attachment</code>: configuran el fondo.</li><li><code>box-sizing</code>: define cómo se calcula el tamaño total de la caja.</li><li><code>display</code>: modifica el comportamiento de la caja, por ejemplo block, inline o none.</li><li><code>visibility</code>: muestra u oculta el elemento sin eliminar su espacio.</li><li><code>overflow</code>: define qué ocurre cuando el contenido no cabe (visible, hidden, scroll o auto).</li></ul><div class="code-card"><div class="code-caption">Ejemplo de tamaño y modelo de cajas.</div><pre><code>.caja {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #0b7a75;
+  margin: 16px;
+  box-sizing: border-box;
+}</code></pre></div></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>Las propiedades CSS controlan los detalles visuales. El modelo de cajas ayuda a entender el tamaño real de cada elemento y el espacio que lo rodea.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Diseñar una tabla de destinos con cabecera, filas alternas y efecto hover. Después, crear un tablero de ajedrez usando clases para las casillas y combinando clases para identificar las piezas.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="tema7.html"><small>← Tema anterior</small><strong>07. Hojas de estilo. CSS</strong></a><a href="tema9.html"><small>Tema siguiente →</small><strong>09. Disposición de los elementos HTML. CSS3</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>

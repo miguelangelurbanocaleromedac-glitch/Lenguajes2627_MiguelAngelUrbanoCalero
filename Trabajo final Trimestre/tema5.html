@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cómo estructurar información con filas y columnas y cómo crear formularios para que el usuario envíe datos.">
+  <meta name="theme-color" content="#173d4b">
+  <title>Tema 05: Tablas y formularios | WebLab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WebLab, inicio">
+      <span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span>
+      <span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span>
+    </a>
+    <div class="header-meta"><span class="status-dot"></span> Proyecto de HTML y CSS <span class="meta-divider">/</span> Temas 01–09</div>
+    <a class="header-link" href="index.html#temario">Ver temario <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<div class="page-layout">
+  <aside class="sidebar" aria-label="Navegación del temario">
+    <div class="sidebar-panel">
+      <p class="sidebar-label">Temario completo · 9 temas</p>
+      <nav class="topic-nav" aria-label="Temas del módulo"><a class="topic-link" href="tema1.html"><span class="topic-number">01</span><span class="topic-name">Lenguajes de marcas</span></a>
+<a class="topic-link" href="tema2.html"><span class="topic-number">02</span><span class="topic-name">Introducción al documento HTML</span></a>
+<a class="topic-link" href="tema3.html"><span class="topic-number">03</span><span class="topic-name">Estructura de un documento HTML</span></a>
+<a class="topic-link" href="tema4.html"><span class="topic-number">04</span><span class="topic-name">Identificación de etiquetas y atributos</span></a>
+<a class="topic-link is-active" href="tema5.html" aria-current="page"><span class="topic-number">05</span><span class="topic-name">Tablas y formularios</span></a>
+<a class="topic-link" href="tema6.html"><span class="topic-number">06</span><span class="topic-name">La web semántica. HTML5</span></a>
+<a class="topic-link" href="tema7.html"><span class="topic-number">07</span><span class="topic-name">Hojas de estilo. CSS</span></a>
+<a class="topic-link" href="tema8.html"><span class="topic-number">08</span><span class="topic-name">Propiedades CSS</span></a>
+<a class="topic-link" href="tema9.html"><span class="topic-number">09</span><span class="topic-name">Disposición de los elementos HTML. CSS3</span></a></nav>
+      <div class="sidebar-bottom"><strong>Estás en el tema 5 de 9</strong><p>Usa el menú para saltar a cualquier unidad del proyecto.</p></div>
+    </div>
+  </aside>
+  <main class="main-content" id="contenido">
+    <section class="topic-hero">
+      <div class="hero-content">
+        <p class="eyebrow">HTML PRÁCTICO · TEMA 05</p>
+        <h1>Tablas y formularios</h1>
+        <p class="lead">Cómo estructurar información con filas y columnas y cómo crear formularios para que el usuario envíe datos.</p>
+        <div class="hero-meta"><span class="hero-pill">HTML</span><span class="hero-pill">Organizar datos y recoger información</span><span class="hero-pill">Unidad 05/09</span></div>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="card-kicker">Objetivos de aprendizaje</p>
+      <h2>Al terminar este tema, deberías poder…</h2>
+      <div class="learning-strip"><div class="learning-point"><span>Objetivo 01</span><p>Crear tablas con cabecera, cuerpo y pie.</p></div><div class="learning-point"><span>Objetivo 02</span><p>Combinar celdas con colspan y rowspan.</p></div><div class="learning-point"><span>Objetivo 03</span><p>Construir formularios y elegir los controles adecuados.</p></div></div>
+      <div class="topic-index"><strong style="font-size:11px;align-self:center;color:#667b76;margin-right:4px">En esta página:</strong><a href="#tablas">Estructura de una tabla</a>
+<a href="#combinar">Agrupar columnas y combinar celdas</a>
+<a href="#formularios">¿Para qué sirven los formularios?</a>
+<a href="#getpost">Métodos GET y POST</a>
+<a href="#atributos">Atributos habituales de los controles</a>
+<a href="#controles">Tipos de controles</a></div>
+    </section>
+    <section class="topic-section" id="tablas">
+  <div class="section-heading"><span class="section-number">01</span><h2>Estructura de una tabla</h2></div>
+  <div class="section-body"><p>La etiqueta <code>&lt;table&gt;</code> crea una tabla. Una tabla está formada por filas y celdas y resulta útil para mostrar datos que guardan relación entre sí.</p><div class="table-wrap"><table><thead><tr><th>Etiqueta</th><th>Función</th></tr></thead><tbody><tr><td><code>&lt;caption&gt;</code></td><td>Título de la tabla.</td></tr><tr><td><code>&lt;thead&gt;</code></td><td>Agrupa la cabecera.</td></tr><tr><td><code>&lt;tbody&gt;</code></td><td>Agrupa el contenido principal.</td></tr><tr><td><code>&lt;tfoot&gt;</code></td><td>Agrupa el pie.</td></tr><tr><td><code>&lt;tr&gt;</code></td><td>Crea una fila.</td></tr><tr><td><code>&lt;th&gt;</code> / <code>&lt;td&gt;</code></td><td>Celda de cabecera / celda de datos.</td></tr></tbody></table></div><div class="code-card"><div class="code-caption">Ejemplo de tabla organizada por secciones.</div><pre><code>&lt;table&gt;
+  &lt;caption&gt;Horario de cursos&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Curso&lt;/th&gt;&lt;th&gt;Horario&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;HTML&lt;/td&gt;&lt;td&gt;16:00 - 20:00&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;CSS&lt;/td&gt;&lt;td&gt;09:00 - 12:00&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;th&gt;Total&lt;/th&gt;&lt;td&gt;35 horas&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre></div></div>
+</section><section class="topic-section" id="combinar">
+  <div class="section-heading"><span class="section-number">02</span><h2>Agrupar columnas y combinar celdas</h2></div>
+  <div class="section-body"><p><code>&lt;colgroup&gt;</code> y <code>&lt;col&gt;</code> permiten agrupar o identificar columnas para poder aplicarles estilos. Para unir celdas se utilizan dos atributos:</p><ul><li><code>colspan</code>: une varias columnas en horizontal.</li><li><code>rowspan</code>: une varias filas en vertical.</li></ul><div class="code-card"><div class="code-caption">Ejemplo de colspan y rowspan.</div><pre><code>&lt;tr&gt;
+  &lt;th colspan=&quot;2&quot;&gt;Datos del curso&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;th rowspan=&quot;2&quot;&gt;Mañana&lt;/th&gt;
+  &lt;td&gt;HTML&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;CSS&lt;/td&gt;&lt;/tr&gt;</code></pre></div></div>
+</section><section class="topic-section" id="formularios">
+  <div class="section-heading"><span class="section-number">03</span><h2>¿Para qué sirven los formularios?</h2></div>
+  <div class="section-body"><p>Los formularios agrupan controles para recoger datos del usuario y enviarlos a un servidor. La etiqueta principal es <code>&lt;form&gt;</code>. Sus atributos más importantes son <code>action</code>, que indica dónde se envían los datos, y <code>method</code>, que define cómo se envían.</p></div>
+</section><section class="topic-section" id="getpost">
+  <div class="section-heading"><span class="section-number">04</span><h2>Métodos GET y POST</h2></div>
+  <div class="section-body"><div class="comparison"><div><span class="sample-tag">GET</span><h3>Los datos viajan en la URL</h3><p>Los valores aparecen en la dirección de la página. Es adecuado para búsquedas o filtros no sensibles.</p></div><div><span class="sample-tag sample-tag-alt">POST</span><h3>Los datos van en el cuerpo de la petición</h3><p>No aparecen en la URL. Suele utilizarse al enviar formularios con datos que no deben mostrarse en la dirección.</p></div></div><p>Usar POST no cifra por sí solo la información. Para proteger los datos durante el envío se necesita HTTPS y medidas adecuadas en el servidor.</p><div class="code-card"><div class="code-caption">Ejemplo de formulario que envía datos mediante POST.</div><pre><code>&lt;form action=&quot;procesar.php&quot; method=&quot;post&quot;&gt;
+  &lt;!-- Controles del formulario --&gt;
+  &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre></div></div>
+</section><section class="topic-section" id="atributos">
+  <div class="section-heading"><span class="section-number">05</span><h2>Atributos habituales de los controles</h2></div>
+  <div class="section-body"><div class="tag-cloud"><code>type</code><code>name</code><code>value</code><code>required</code><code>size</code><code>minlength</code><code>maxlength</code><code>autofocus</code><code>disabled</code><code>readonly</code><code>tabindex</code></div><p><code>type</code> determina el tipo de control; <code>name</code> identifica el dato; <code>value</code> establece un valor; <code>required</code> marca un campo como obligatorio; <code>minlength</code> y <code>maxlength</code> limitan la longitud. <code>disabled</code> desactiva el control, mientras que <code>readonly</code> permite verlo y enfocarlo, pero no modificarlo.</p></div>
+</section><section class="topic-section" id="controles">
+  <div class="section-heading"><span class="section-number">06</span><h2>Tipos de controles</h2></div>
+  <div class="section-body"><div class="tool-grid"><article class="tool-card"><h3>Botones</h3><p><code>button</code> ejecuta una acción; <code>submit</code> envía el formulario; <code>reset</code> restaura los valores iniciales.</p></article><article class="tool-card"><h3>Texto</h3><p><code>text</code> introduce texto; <code>password</code> oculta lo escrito; <code>textarea</code> permite varias líneas.</p></article><article class="tool-card"><h3>Selección múltiple</h3><p><code>checkbox</code> permite marcar varias opciones.</p></article><article class="tool-card"><h3>Selección única</h3><p><code>radio</code> permite elegir una opción dentro de un grupo con el mismo nombre.</p></article><article class="tool-card"><h3>Lista desplegable</h3><p><code>select</code> agrupa opciones <code>option</code>.</p></article><article class="tool-card"><h3>Agrupación</h3><p><code>fieldset</code> agrupa controles y <code>legend</code> pone un título al grupo.</p></article></div><div class="code-card"><div class="code-caption">Ejemplo sencillo de formulario.</div><pre><code>&lt;form action=&quot;#&quot; method=&quot;get&quot;&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Datos de contacto&lt;/legend&gt;
+    &lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt;
+    &lt;input id=&quot;nombre&quot; name=&quot;nombre&quot; type=&quot;text&quot; required&gt;
+
+    &lt;label for=&quot;mensaje&quot;&gt;Mensaje&lt;/label&gt;
+    &lt;textarea id=&quot;mensaje&quot; name=&quot;mensaje&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;
+
+    &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+    &lt;button type=&quot;reset&quot;&gt;Borrar&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre></div></div>
+</section>
+    <section class="callout"><p class="card-kicker">Idea clave del tema</p><p>Las tablas organizan datos en filas y columnas. Los formularios recogen información y necesitan controles bien identificados, etiquetas y un método de envío adecuado.</p></section>
+    <section class="practice-card"><p class="card-kicker">Reto práctico inspirado en los apuntes</p><h2>Ahora toca ponerlo en práctica</h2><p>Diseñar una tabla de actividades formativas con título, cabecera, filas de cursos y total de horas. Después, crear un formulario de contacto con varios controles agrupados mediante fieldset y legend.</p></section>
+    <nav class="page-switch" aria-label="Navegación entre temas"><a href="tema4.html"><small>← Tema anterior</small><strong>04. Identificación de etiquetas y atributos</strong></a><a href="tema6.html"><small>Tema siguiente →</small><strong>06. La web semántica. HTML5</strong></a></nav>
+  </main>
+</div>
+<footer class="site-footer"><div class="footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><span>&lt;</span><b>/</b><span>&gt;</span></span><span class="brand-copy"><strong>WEB<span>LAB</span></strong><small>Lenguajes de marcas</small></span></a><p>Proyecto educativo · Lenguajes de Marcas y Sistemas de Gestión de Información</p><a href="#top">Volver arriba ↑</a></div><div class="footer-note">Contenidos resumidos y explicados a partir de los apuntes facilitados para los temas 1 al 9.</div></footer>
+</body>
+</html>
